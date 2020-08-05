@@ -1,0 +1,29 @@
+<!-- <p> {{ emojiNum }} </p> -->
+
+<div class="emojiButton">
+    <button class="glow-on" (click)="generateEmoji()">Surprise</button>
+    <p *ngIf="tempEmojiList.length > 0" class="count">
+    {{count}}
+</p>
+</div>
+<div class = "emojiLayout">
+<div *ngIf="tempEmojiList.length > 0">
+    <p *ngIf="tempEmojiList.length === 75" class="message">
+        {{ message }}
+    </p> 
+    <div *ngIf="tempEmojiList.length !== 75">
+        <img src={{path}} class="imageIcon"><br><br>
+        <p class="code"> {{ codeNumber }}</p>
+    </div>
+    
+    <!-- <p class="count">{{ count }}</p> -->
+</div>
+</div>
+<div class="emojiHistory">
+<ng-container *ngFor="let emoji of showEmoji" class="showImg">
+   <img src="{{emoji}}"/>
+</ng-container>
+</div>
+<div class = "footerText">
+    <footer class="footer">Copyright © 2020 by LaxmiVatsav</footer>
+</div>

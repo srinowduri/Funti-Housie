@@ -1,0 +1,32 @@
+.navbar {
+    min-height: 35px;
+    .nav-link:hover {
+        color: red;
+    }
+}
+
+.navbar-default {
+    background-color:navy;
+    height: 20px;
+}
+
+.navbar a {
+    color:oldlace;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 8px 100px 8px 0px;
+    font-family: comic sans MS;
+}
+
+.navbar-nav li a:hover {
+    color: yellow;
+}
+
+.navbar-nav li a:focus {
+    color:lightgreen;
+}
+
+.body {
+    background-color: turquoise;
+}
+

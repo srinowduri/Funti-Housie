@@ -1,0 +1,15 @@
+<p *ngIf="!boardCompleted" class="letter"> {{ alphabet }} </p>
+<p *ngIf="boardCompleted" class="message"> {{ message }} </p>
+<button class="alphabet" (click)="generateAlphabet()">Surprise</button>
+<div>
+<table class="letters">
+    <tr style="height: 30px;" *ngFor="let i of numOfRows">
+        <td *ngFor="let j of numOfCols"  [ngStyle]="alphaColorList[i][j]"> 
+            <p *ngIf=" alphaTable[i][j] !== -1">
+                 {{ alphaTable[i][j] }}
+            </p>
+        </td>
+    </tr>
+</table>
+</div>
+<footer class="footer">Copyright © 2020 by LaxmiVatsav</footer>
