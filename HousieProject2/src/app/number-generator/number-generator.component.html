@@ -1,0 +1,22 @@
+<div style="position: fixed">
+<ngx-spinner [fullScreen]="false">  
+     <div class="spinner"></div>   
+</ngx-spinner>
+</div>
+<p *ngIf="!boardCompleted && displayNumber" class="displayNumber">{{ number }}</p>
+<p *ngIf="boardCompleted" class="message">
+    {{ message }}
+</p>
+<button id="num" (click)="numberGenerator()">Number</button>
+<div class="tableDiv">
+    <table class="center">
+        <tr style="height: 30px;" *ngFor="let i of numOfRows">
+            <td *ngFor="let j of numOfCols"  [ngStyle]="prevColorList[i][j]">
+                <p *ngIf="tableNums[i][j] !== 0">
+                    {{ tableNums[i][j] }}
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer class="footer">Copyright © 2020 by LaxmiVatsav</footer>

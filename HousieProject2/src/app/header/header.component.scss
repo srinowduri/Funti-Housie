@@ -1,0 +1,40 @@
+.fm-header {
+    text-align: center;
+    vertical-align: center;
+    height: 70px;
+    display: ruby-base;
+    background-color:floralwhite;
+    margin-top: -20px;
+    
+    &__title {
+        text-align: center;
+        font-size: 60px;
+        font-weight: bolder;
+        color:limegreen;
+        font-family: jokerman;
+        padding: 5px;
+    }
+
+    &__img {
+        width: 80px;
+        height: 60px;
+       float: left;
+    }
+    &__image {
+        width: 80px;
+        height: 60px;
+       float: right;
+    }
+    &__tict{
+        margin: 10px;
+        width: 200px;
+        height: 50px;
+       float: right;
+    }
+    &__tikt{
+        margin: 10px;
+        width: 200px;
+        height: 50px;
+       float: left;
+    }
+}

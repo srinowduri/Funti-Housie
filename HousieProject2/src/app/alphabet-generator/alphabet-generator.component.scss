@@ -1,0 +1,76 @@
+table.letters{
+	margin-left: 30%; 
+    margin-right:auto;
+	margin-top: 50px;
+	border-collapse: collapse;
+	width:200;
+	height:400;
+	table-layout: fixed;
+	text-align:center;
+	background-color:rgb(241, 239, 248);
+	top: 20vh;
+}
+
+table,td{
+	border: 3px solid rgb(18, 19, 19);
+	
+	
+}
+table.letters td{
+	text-align:center;
+	font-size:32px;
+	color:black;
+	font-weight:900;
+	width:100px;
+	height:60px;
+}
+.alphabet {
+	width: 180px;
+	height: 80px;
+	border-radius: 20px;
+	margin-top: 400px;
+	margin-left: 120px;
+	float: left;
+	color: wheat;
+	font-family: Lucida Sans;
+	font-size: 30px;
+	font-weight: bolder;
+	background-color:rgb(240, 9, 9);
+	border-radius: 15px;
+	outline: none;
+	border: none;
+}
+
+.alphabet:hover {
+	background-color: blue;
+	color: white;
+}
+.alphabet:active{
+	box-shadow: 10px 0 10px 10px rgb(163, 191, 236);
+	transform: translateZ(10px);
+}
+.letter{
+	float: left;
+    margin-top: 20px;
+    font-size: 160px;
+    position: fixed;
+	padding: 80px;
+	margin-left: 50px;
+}
+
+.message{
+	float: left;
+    margin-top: 300px;
+    font-size: 50px;
+    position: fixed;
+	margin-left: 5px;
+	font-weight: bolder;
+	font-family: comic sans MS;
+}
+
+.footer{
+    margin-top: 30px;
+    text-align: center;
+    
+    
+}
