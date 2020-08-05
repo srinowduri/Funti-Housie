@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NgxSpinnerModule } from "ngx-spinner"; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TicketsComponent } from './tickets/tickets.component';
+import { ActionsComponent } from './actions/actions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AlphabetGeneratorComponent,
     HeaderComponent,
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    TicketsComponent,
+    ActionsComponent
   ],
   imports: [
     BrowserModule,

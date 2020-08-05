@@ -1,0 +1,21 @@
+<table class="tableTC">
+    <tr>
+        <th>Name</th>
+        <th>Phone no.</th>
+        <th>Tickets</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let member of members"> 
+        <td>{{ member.name}}</td>
+        <td>{{ member.phone }}</td>
+        <td>{{ member.numTickets }}</td>
+        <td>Edit / Delete </td>
+    </tr>
+</table>
+<button class="btn btn-success" (click)="onAction()">+</button>
+<button class="btn btn-primary">Generate Tickets</button>
+<button class="btn btn-danger">Clear Cache</button>
+
+<div class="action">
+    <app-actions (memberAdded)="onMemberAdded($event)" *ngIf="showAction"></app-actions>
+</div>
