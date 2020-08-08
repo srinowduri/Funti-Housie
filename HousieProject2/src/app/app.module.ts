@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TicketsComponent } from './tickets/tickets.component';
 import { ActionsComponent } from './actions/actions.component';
+import { EditDataComponent } from './edit-data/edit-data.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +26,16 @@ import { ActionsComponent } from './actions/actions.component';
     FooterComponent,
     NavBarComponent,
     TicketsComponent,
-    ActionsComponent
+    ActionsComponent,
+    EditDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

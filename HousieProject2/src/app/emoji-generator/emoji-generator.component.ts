@@ -10,6 +10,7 @@ export class EmojiGeneratorComponent  {
   emojiNum: string; 
   showEmoji: string[] = [];
   path: string;
+  emojiDone: boolean;
   tempEmojiList: number[] = [];
   codeList = ["SML", "GRN", "LOL", "SLF", "FSF", "TON", "SLP", "CBH", "PTY", "COL", "SAD", "CRY", "GST", "DSB", "DHB", "DTB", "WIN", "CRS", "HRY", "DAN", "PNT", "HIT", "NAM", "KID", "SDY", "FET", "DOG", "RCN", "TGR", "UCN", "RDR", "EPT", "MOS", "RBT", "SQL", "PAW", "BRD", "SNK", "OCP", "ANT", "MNY", "MSK", "YWN", "BMB", "CLP", "SLF", "NNY", "TAT", "PIG", "CML", "PND", "HEN", "PGN", "EGL", "DUC", "SWN", "TRX", "WHL", "DLP", "FSH", "SHK", "BLY", "XMS", "PAM", "RCE", "MPL", "MNG", "BAN", "CCT", "CRT", "PUT", "CHZ", "PIZ", "PCN", "ICM"];	
   constructor() { 
@@ -25,9 +26,11 @@ export class EmojiGeneratorComponent  {
   generateEmoji() {
     let randomEmojiIndex, randomEmojiNumber = 0; 
     
-    if(this.tempEmojiList.length < 76){
+    if(this.tempEmojiList.length < 75){
       do{
         randomEmojiIndex = Math.floor(Math.random() * this.emojiList.length);
+        //console.log("randam index: "+ randomEmojiIndex);
+        //console.log("temp list: "+ this.tempEmojiList);
       }while(this.tempEmojiList.indexOf(randomEmojiIndex) !== -1);
 
       randomEmojiNumber = this.emojiList[randomEmojiIndex];
@@ -37,8 +40,17 @@ export class EmojiGeneratorComponent  {
       this.prevEmoji = this.emojiNum;
       this.emojiNum = this.path;
       this.tempEmojiList.push(randomEmojiIndex);
-      this.showEmoji.push(this.prevEmoji);
-     
+      if(this.prevEmoji !== undefined){
+        this.showEmoji.push(this.prevEmoji);
+      }
+    } else if(this.tempEmojiList.length === 75){
+      this.prevEmoji = this.emojiNum;
+      this.emojiNum = this.path;
+      if(this.showEmoji.length < 75){
+        this.showEmoji.push(this.prevEmoji);
+      }
+    //  console.log(this.showEmoji);
+      this.emojiDone = true;
     }
   }
 

@@ -6,22 +6,25 @@
     border-collapse: collapse;
     margin-left: 10%; 
     margin-right:auto;
-	margin-top: 50px;
+    margin-top: 50px;
+    background-color: lightblue;
 }
 
 table,td, th{
     border: 2px solid black;
+    height: 50px;
 }
 td{
-    text-align: left;
+    text-align: center;
     font-size: large;
     font-weight: bold;
-    color: blue;
+    color: black;
 }
 th{
     color: red;
     font-size: large;
     font-weight: bold;
+    text-align: center;
 }
 .btn-success{
     float: left;
@@ -46,4 +49,19 @@ th{
     margin-top: 10%;
     font-size: large;
 }
+
+.edit, .delete{
+    padding: 1px;
+    margin: 5px;
+    
+    outline: none;
+    border-radius: 0.2em;
+    color: white;
+    cursor: pointer;
+
+}
+.numTicket{
+    font-size: 30px;
+}
+
 

@@ -7,22 +7,26 @@
 </p>
 </div>
 <div class = "emojiLayout">
-<div *ngIf="tempEmojiList.length > 0">
-    <p *ngIf="tempEmojiList.length === 75" class="message">
+    <div *ngIf="tempEmojiList.length > 0">
+   
+        <div *ngIf="!emojiDone">                  <!--"tempEmojiList.length <= 75" -->
+            <img src={{path}} class="imageIcon"><br><br>
+            <p class="code"> {{ codeNumber }}</p>
+        </div>
+
+    <!-- <p class="count">{{ count }}</p> -->
+    </div>
+    <p *ngIf="emojiDone" class="message">     <!--"tempEmojiList.length === 75"-->
         {{ message }}
     </p> 
-    <div *ngIf="tempEmojiList.length !== 75">
-        <img src={{path}} class="imageIcon"><br><br>
-        <p class="code"> {{ codeNumber }}</p>
-    </div>
-    
-    <!-- <p class="count">{{ count }}</p> -->
-</div>
+   
 </div>
 <div class="emojiHistory">
 <ng-container *ngFor="let emoji of showEmoji" class="showImg">
-   <img src="{{emoji}}"/>
-</ng-container>
+    
+        <img src="{{emoji}}"/>
+    
+</ng-container> 
 </div>
 <div class = "footerText">
     <footer class="footer">Copyright © 2020 by LaxmiVatsav</footer>

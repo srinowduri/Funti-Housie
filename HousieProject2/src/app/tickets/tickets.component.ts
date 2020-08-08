@@ -11,8 +11,10 @@ import { members } from '../members.data';
 export class TicketsComponent implements OnInit {
   members: Person[];
   showAction: boolean = false;
+  editAction: boolean = false;
   show:boolean;
   hide:boolean;
+  @Output() person: Person;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,14 +22,47 @@ export class TicketsComponent implements OnInit {
   }
 
   onMemberAdded(person: Person){
+   // console.log(person);
+   if(person !== undefined){
     this.members.push(person);
-    console.log(this.members);
+   }
+    this.showAction = false;
+    //console.log(this.members);
   }
   onAction() { 
     this.showAction = !this.showAction; 
 
     if(this.showAction){   
       this.showAction = true; 
+      this.editAction = false;
     } 
   } 
+  onEditPerson(person: Person){
+    this.person = person;
+    this.editAction = true;
+    this.showAction = false;
+    //console.log(this.person);
+  }
+
+  onUpdateMember(person: Person){
+    // console.log("old person"+ this.person.name);
+    // console.log("new person"+ person.name);
+
+  this.members = this.members.map((pern: Person) => {
+      if(pern.name === this.person.name){
+        pern = person;
+      }
+      return pern;
+    });
+    this.editAction = false;
+  }
+
+  onDeletePerson(name){
+   for(let i = 0; i < this.members.length; i++){
+     if(this.members[i].name === name){
+       this.members.splice(i,1);
+     }
+   }
+    
+  }
 }

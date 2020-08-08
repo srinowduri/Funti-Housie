@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output, Input } from '@angular/core';
 import { Person } from '../person.model';
 
 @Component({
@@ -12,10 +12,10 @@ export class ActionsComponent implements OnInit {
   @ViewChild('ticketInput') ticketInputRef: ElementRef;
   @Output() memberAdded = new EventEmitter<Person>();
 
-  
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   onAddMember(){
@@ -27,5 +27,9 @@ export class ActionsComponent implements OnInit {
     console.log("Added member: " + newMember);
     this.memberAdded.emit(newMember); 
     
+  }
+
+  onCancel(){
+    this.memberAdded.emit();
   }
 }
