@@ -20,11 +20,10 @@ export class ActionsComponent implements OnInit {
 
   onAddMember(){
     const memberName = this.nameInputRef.nativeElement.value;
-    console.log("name: " + memberName);
     const phoneNum = this.phoneInputRef.nativeElement.value;
     const numTicket = this.ticketInputRef.nativeElement.value;
     const newMember = new Person(memberName, phoneNum, numTicket);
-    console.log("Added member: " + newMember);
+   
     this.memberAdded.emit(newMember); 
     
   }

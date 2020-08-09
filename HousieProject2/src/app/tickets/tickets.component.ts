@@ -26,12 +26,11 @@ export class TicketsComponent implements OnInit {
   }
 
   onMemberAdded(person: Person){
-   // console.log(person);
    if(person !== undefined){
     this.members.push(person);
    }
     this.showAction = false;
-    //console.log(this.members);
+   
   }
   onAction() { 
     this.showAction = !this.showAction; 
@@ -45,13 +44,10 @@ export class TicketsComponent implements OnInit {
     this.person = person;
     this.editAction = true;
     this.showAction = false;
-    //console.log(this.person);
+  
   }
 
   onUpdateMember(person: Person){
-    // console.log("old person"+ this.person.name);
-    // console.log("new person"+ person.name);
-
   this.members = this.members.map((pern: Person) => {
       if(pern.name === this.person.name){
         pern = person;

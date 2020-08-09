@@ -1,3 +1,14 @@
+<app-edit-data [person]="person" *ngIf="editAction" (memberUpdated)="onUpdateMember($event)"></app-edit-data>
+
+<div class="action">
+    <app-actions (memberAdded)="onMemberAdded($event)" *ngIf="showAction"></app-actions>
+</div>
+<button class="btn btn-primary" (click)="onGenerateTickets(members)">Generate Tickets</button>
+<button class="btn btn-danger" (click)="onClearCache()">Clear Cache</button>
+
+<button class="btn btn-success" (click)="onAction()">+</button>
+
+
 <table class="tableTC">
     <tr>
         <th>Name</th>
@@ -10,17 +21,14 @@
         <td>{{ member.phone }}</td>
         <td class="numTicket">{{ member.numTickets }}</td>
         <td> <span class="edit" (click)="onEditPerson(member)" style='font-size:20px;'>&#x270D;</span>
-            <!-- <button class="edit" (click)="onEditPerson(member)">Edit</button> -->
-            <!-- <button class="delete" (click)="onDeletePerson(member.name)">Delete</button> --> /
+            /
             <img class="delete" (click)="onDeletePerson(member.name)" src="https://img.icons8.com/metro/20/000000/trash.png"/>
         </td>
     </tr>
 </table>
-<button class="btn btn-success" (click)="onAction()">+</button>
-<button class="btn btn-primary" (click)="onGenerateTickets(members)">Generate Tickets</button>
-<button class="btn btn-danger" (click)="onClearCache()">Clear Cache</button>
 
-<!-- <div class="message">
+
+<div class="message">
     <div class="success" *ngIf="successMessage">
         {{ successMessage }}
     </div>
@@ -28,10 +36,6 @@
     <div class="error" *ngIf="errorMessage">
         {{ errorMessage }}
     </div>
-</div> -->
-
-<div class="action">
-    <app-actions (memberAdded)="onMemberAdded($event)" *ngIf="showAction"></app-actions>
-    
-    <app-edit-data [person]="person" *ngIf="editAction" (memberUpdated)="onUpdateMember($event)"></app-edit-data>
 </div>
+
+

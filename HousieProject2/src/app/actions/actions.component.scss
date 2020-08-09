@@ -3,20 +3,15 @@ button{
 }
 .container{
     border: 2px solid black;
-    //float: right;
+    float: right;
     border-radius: 10px;
     border-collapse: collapse;
     width: 20%;
     height: 300px;
-    margin-left: 70%;
+    margin-right: 20%;
     font-size: 18px;
-    position: sticky;
-    
+    position: sticky;   
 }
 label{
     float: left;
-}
-
-.wrap{
-    width: 100%;
 }
