@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { EmojiGeneratorComponent } from './emoji-generator/emoji-generator.component';
 import { NumberGeneratorComponent } from './number-generator/number-generator.component';
@@ -16,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TicketsComponent } from './tickets/tickets.component';
 import { ActionsComponent } from './actions/actions.component';
 import { EditDataComponent } from './edit-data/edit-data.component';
+import { TicketService } from './service/ticketService.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +39,10 @@ import { EditDataComponent } from './edit-data/edit-data.component';
     FormsModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ TicketService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

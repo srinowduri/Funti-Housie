@@ -17,8 +17,18 @@
     </tr>
 </table>
 <button class="btn btn-success" (click)="onAction()">+</button>
-<button class="btn btn-primary">Generate Tickets</button>
-<button class="btn btn-danger">Clear Cache</button>
+<button class="btn btn-primary" (click)="onGenerateTickets(members)">Generate Tickets</button>
+<button class="btn btn-danger" (click)="onClearCache()">Clear Cache</button>
+
+<!-- <div class="message">
+    <div class="success" *ngIf="successMessage">
+        {{ successMessage }}
+    </div>
+    
+    <div class="error" *ngIf="errorMessage">
+        {{ errorMessage }}
+    </div>
+</div> -->
 
 <div class="action">
     <app-actions (memberAdded)="onMemberAdded($event)" *ngIf="showAction"></app-actions>

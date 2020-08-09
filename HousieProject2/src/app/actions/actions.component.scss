@@ -8,9 +8,15 @@ button{
     border-collapse: collapse;
     width: 20%;
     height: 300px;
-    margin-right: 10%;
+    margin-left: 70%;
     font-size: 18px;
+    position: sticky;
+    
 }
 label{
     float: left;
+}
+
+.wrap{
+    width: 100%;
 }

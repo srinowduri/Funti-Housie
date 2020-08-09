@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Person } from '../person.model';
 import { members } from '../members.data';
+import { TicketService } from '../service/ticketService.service';
 
 
 @Component({
@@ -14,8 +15,11 @@ export class TicketsComponent implements OnInit {
   editAction: boolean = false;
   show:boolean;
   hide:boolean;
+
+  successMessage!: string;
+  errorMessage!: string;
   @Output() person: Person;
-  constructor() { }
+  constructor(private ticketService: TicketService) { }
 
   ngOnInit(): void {
     this.members = members;
@@ -61,8 +65,25 @@ export class TicketsComponent implements OnInit {
    for(let i = 0; i < this.members.length; i++){
      if(this.members[i].name === name){
        this.members.splice(i,1);
-     }
-   }
-    
+      }
+    } 
+  }
+
+  onGenerateTickets(persons: Person[]){
+    this.ticketService.generateTickets(persons).subscribe( 
+      member =>{
+        this.successMessage = "Tickets are generated successfully";
+        console.log("hi");
+    },
+    error =>{
+      this.errorMessage = "Tickets generation Failed";
+  });
+  }
+
+  onClearCache(){
+    this.ticketService.cacheClear().subscribe(
+     next => { this.successMessage = "Cache is cleared" },
+     error => { this.errorMessage = "Cache is not cleared"}
+    )
   }
 }
