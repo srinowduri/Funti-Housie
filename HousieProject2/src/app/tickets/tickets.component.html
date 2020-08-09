@@ -6,9 +6,6 @@
 <button class="btn btn-primary" (click)="onGenerateTickets(members)">Generate Tickets</button>
 <button class="btn btn-danger" (click)="onClearCache()">Clear Cache</button>
 
-<button class="btn btn-success" (click)="onAction()">+</button>
-
-
 <table class="tableTC">
     <tr>
         <th>Name</th>
@@ -26,7 +23,7 @@
         </td>
     </tr>
 </table>
-
+<button class="btn btn-success" (click)="onAction()">+</button>
 
 <div class="message">
     <div class="success" *ngIf="successMessage">
