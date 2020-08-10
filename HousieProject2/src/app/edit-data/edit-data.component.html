@@ -1,0 +1,20 @@
+<div class="container">
+    <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="text" class="form-control" formControlName="phone">
+        </div>
+        <div class="form-group">
+            <label>Tickets</label>
+            <input type="text" class="form-control" formControlName="numTickets">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Edit</button>
+            <button type="submit" class="btn btn-danger">Cancel</button>
+        </div>
+    </form>
+</div>
