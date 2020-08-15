@@ -54,7 +54,7 @@ export class TicketsComponent implements OnInit {
       }
       return pern;
     });
-    this.editAction = false;
+    this.editAction = false;  
   }
 
   onDeletePerson(name){

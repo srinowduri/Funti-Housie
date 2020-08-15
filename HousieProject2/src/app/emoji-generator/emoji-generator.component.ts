@@ -12,9 +12,9 @@ export class EmojiGeneratorComponent  {
   path: string;
   emojiDone: boolean;
   tempEmojiList: number[] = [];
-  codeList = ["SML", "GRN", "LOL", "SLF", "FSF", "TON", "SLP", "CBH", "PTY", "COL", "SAD", "CRY", "GST", "DSB", "DHB", "DTB", "WIN", "CRS", "HRY", "DAN", "PNT", "HIT", "NAM", "KID", "SDY", "FET", "DOG", "RCN", "TGR", "UCN", "RDR", "EPT", "MOS", "RBT", "SQL", "PAW", "BRD", "SNK", "OCP", "ANT", "MNY", "MSK", "YWN", "BMB", "CLP", "SLF", "NNY", "TAT", "PIG", "CML", "PND", "HEN", "PGN", "EGL", "DUC", "SWN", "TRX", "WHL", "DLP", "FSH", "SHK", "BLY", "XMS", "PAM", "RCE", "MPL", "MNG", "BAN", "CCT", "CRT", "PUT", "CHZ", "PIZ", "PCN", "ICM"];	
+  codeList = ["SML", "GRN", "LOL", "SLF", "FSF", "TON", "SLP", "CBH", "PTY", "COL", "SAD", "CRY", "GST", "DSB", "DHB", "DTB", "WIN", "CRS", "HRY", "DAN", "PNT", "HIT", "NAM", "KID", "SDY", "FET", "DOG", "RCN", "TGR", "UCN", "RDR", "EPT", "MOS", "RBT", "SQL", "PAW", "BRD", "SNK", "OCP", "ANT", "MNY", "MSK", "YWN", "BMB", "CLP", "SLF", "NNY", "TAT", "PIG", "CML", "PND", "HEN", "PGN", "EGL", "DUC", "SWN", "TRX", "WHL", "DLP", "FSH", "SHK", "BLY", "XMS", "PAM", "RCE", "MPL", "MNG", "BAN", "CCT", "CRT", "PUT", "CHZ", "PIZ", "PCN", "ICM", "HFV", "TCR", "FMR", "CHF", "MEC", "FWR", "OWR", "SCN", "ITW", "ART", "PLT", "AST", "SCS", "HBS", "BJL", "GLC", "ONN", "LLP", "MTN", "BRK", "TML", "TRN", "ATO", "CAR", "SHP"];
   constructor() { 
-    for(let i = 1; i < 76; i++){
+    for(let i = 1; i < 101; i++){
       this.emojiList.push(i);
     }
   }
@@ -26,7 +26,7 @@ export class EmojiGeneratorComponent  {
   generateEmoji() {
     let randomEmojiIndex, randomEmojiNumber = 0; 
     
-    if(this.tempEmojiList.length < 75){
+    if(this.tempEmojiList.length < 100){
       do{
         randomEmojiIndex = Math.floor(Math.random() * this.emojiList.length);
         //console.log("randam index: "+ randomEmojiIndex);
@@ -43,10 +43,10 @@ export class EmojiGeneratorComponent  {
       if(this.prevEmoji !== undefined){
         this.showEmoji.push(this.prevEmoji);
       }
-    } else if(this.tempEmojiList.length === 75){
+    } else if(this.tempEmojiList.length === 100){
       this.prevEmoji = this.emojiNum;
       this.emojiNum = this.path;
-      if(this.showEmoji.length < 75){
+      if(this.showEmoji.length < 100){
         this.showEmoji.push(this.prevEmoji);
       }
     //  console.log(this.showEmoji);

@@ -1,5 +1,14 @@
 <p *ngIf="!boardCompleted" class="letter"> {{ alphabet }} </p>
 <p *ngIf="boardCompleted" class="message"> {{ message }} </p>
+
+
+<div>
+    <img src={{teluguImagePath}} [ngClass]="{'image': isSmall}">
+    <p class="teluguWord">{{ teluguWord }}</p>
+</div>
+
+
+
 <button class="alphabet" (click)="generateAlphabet()">Surprise</button>
 <div>
 <table class="letters">
