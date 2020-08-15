@@ -68,9 +68,26 @@ table.letters td{
 	font-family: comic sans MS;
 }
 
+.teluguWord{
+	float: right;
+	margin-right: 8%;
+	font-size: 70px;
+	margin-top: 400px;
+	font-weight: bolder;
+}
+img{
+	float: right;
+	margin-left: 30%;
+	position: fixed;
+	margin-top: 100px;
+}
+.image{
+	height: 200px;
+	width: 200px;
+}
+
 .footer{
     margin-top: 30px;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
+
