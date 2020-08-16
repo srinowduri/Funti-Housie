@@ -20,6 +20,7 @@ import { TicketsComponent } from './tickets/tickets.component';
 import { ActionsComponent } from './actions/actions.component';
 import { EditDataComponent } from './edit-data/edit-data.component';
 import { TicketService } from './service/ticketService.service';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { TicketService } from './service/ticketService.service';
     NgxSpinnerModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
   ],
   providers: [ TicketService ],
   bootstrap: [AppComponent]

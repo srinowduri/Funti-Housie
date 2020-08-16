@@ -2,7 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Person } from '../person.model';
 import { members } from '../members.data';
 import { TicketService } from '../service/ticketService.service';
-
+import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragHandle} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-tickets',
@@ -81,5 +81,10 @@ export class TicketsComponent implements OnInit {
      next => { this.successMessage = "Cache is cleared" },
      error => { this.errorMessage = "Cache is not cleared"}
     )
+  }
+
+  onDrop(event: CdkDragDrop<Person[]>) {
+    // Swap the elements around
+    moveItemInArray(this.members, event.previousIndex, event.currentIndex);
   }
 }
