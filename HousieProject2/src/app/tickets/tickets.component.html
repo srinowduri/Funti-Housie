@@ -7,21 +7,25 @@
 <button class="btn btn-danger" (click)="onClearCache()">Clear Cache</button>
 
 <table class="tableTC">
-    <tr>
-        <th>Name</th>
-        <th>Phone no.</th>
-        <th>Tickets</th>
-        <th>Actions</th>
-    </tr>
-    <tr *ngFor="let member of members"> 
-        <td>{{ member.name}}</td>
-        <td>{{ member.phone }}</td>
-        <td class="numTicket">{{ member.numTickets }}</td>
-        <td> <span class="edit" (click)="onEditPerson(member)" style='font-size:20px;'>&#x270D;</span>
-            /
-            <img class="delete" (click)="onDeletePerson(member.name)" src="https://img.icons8.com/metro/20/000000/trash.png"/>
-        </td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone no.</th>
+            <th>Tickets</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody cdkDropList class="member-list" (cdkDropListDropped)="onDrop($event)">
+        <tr *ngFor="let member of members" class="member-element" cdkDrag cdkDragLockAxis="y"> 
+            <td class="col-md">{{ member.name}}</td>
+            <td class="col-md">{{ member.phone }}</td>
+            <td class="numTicket">{{ member.numTickets }}</td>
+            <td class="col-md"> <span class="edit" (click)="onEditPerson(member)" style='font-size:20px;'>&#x270D;</span>
+                /
+                <img class="delete" (click)="onDeletePerson(member.name)" src="https://img.icons8.com/metro/20/000000/trash.png"/>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <button class="btn btn-success" (click)="onAction()">+</button>
 
