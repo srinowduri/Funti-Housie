@@ -12,7 +12,7 @@ export class EmojiGeneratorComponent  {
   path: string;
   emojiDone: boolean;
   tempEmojiList: number[] = [];
-  codeList = ["SML", "GRN", "LOL", "SLF", "FSF", "TON", "SLP", "CBH", "PTY", "COL", "SAD", "CRY", "GST", "DSB", "DHB", "DTB", "WIN", "CRS", "HRY", "DAN", "PNT", "HIT", "NAM", "KID", "SDY", "FET", "DOG", "RCN", "TGR", "UCN", "RDR", "EPT", "MOS", "RBT", "SQL", "PAW", "BRD", "SNK", "OCP", "ANT", "MNY", "MSK", "YWN", "BMB", "CLP", "SLF", "NNY", "TAT", "PIG", "CML", "PND", "HEN", "PGN", "EGL", "DUC", "SWN", "TRX", "WHL", "DLP", "FSH", "SHK", "BLY", "XMS", "PAM", "RCE", "MPL", "MNG", "BAN", "CCT", "CRT", "PUT", "CHZ", "PIZ", "PCN", "ICM", "HFV", "TCR", "FMR", "CHF", "MEC", "FWR", "OWR", "SCN", "ITW", "ART", "PLT", "AST", "SCS", "HBS", "BJL", "GLC", "ONN", "LLP", "MTN", "BRK", "TML", "TRN", "ATO", "CAR", "SHP"];
+  codeList = ["FTY", "GST", "STY", "DOG", "DER", "EPT", "MOS", "KGR", "MSQ", "BRD", "SNK", "SPN", "ANT", "MNY", "BRS", "TRK", "PCK", "HEN", "PGN", "EGL", "DCK", "SWN", "DGN", "WHL", "DLP", "FSH", "SHK", "PPR", "PAM", "CRN", "PPL", "GRP", "CCT", "CRT", "BCH", "TOM", "BUS", "ICM", "HFV", "TCR", "FMR", "CHF", "MEC", "FWR", "DOC", "SNT", "ITW", "ART", "PLT", "AST", "SCS", "HBS", "BJL", "GLC", "ONN", "POP", "MTN", "BRC", "TPL", "TRN", "ATO", "CAR", "CRS", "BEE", "SHP", "SUN", "MON", "FRE", "SNW", "SNF", "CKE", "CCL", "WMN", "BCL", "PEN", "STL", "NBK", "CFE", "UMB", "MHM", "TTS", "HRS", "MDL", "CKT", "STL", "KTE", "DCE", "BEL", "DPM", "BLN", "CRT", "TSL", "FLG", "CDL", "CRB", "SMN", "WZD", "ZBR", "COW", "RNO"];
   constructor() { 
     for(let i = 1; i < 101; i++){
       this.emojiList.push(i);
