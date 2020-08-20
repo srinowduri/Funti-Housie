@@ -17,7 +17,7 @@ button#num{
 	font-weight: 1000;
 	float: left;
 	margin-top: 400px;
-	margin-left: 120px;
+	margin-left: 60px;
 }
 #num:hover{
 	background-color: rgba(17, 21, 228, 0.89);
@@ -31,17 +31,17 @@ button#num{
 
 .displayNumber{
     float: left;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 160px;
     position: fixed;
-	padding: 80px;
-	margin-left: 50px;
+	padding: 20px;
+	margin-left: 35px;
 	font-family: comic sans MS;
 }
 
 /* Table styles */
 table.center{
-	margin-left: 23%; 
+	margin-left: 20%; 
     margin-right:auto;
 	margin-top: 50px;
 	border-collapse: collapse;
@@ -85,11 +85,11 @@ table.center td{
 .spinner {
 	/* Size and position */
 	float: left;
-    margin-top: 115px;
+    margin-top: 80px;
     font-size: 400px;
     position: fixed;
-	padding: 80px;
-	margin-left: 115px;
+	padding: 20px;
+	margin-left: 50px;
 	 width: 200px;
      height: 200px;
     
